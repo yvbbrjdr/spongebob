@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en_US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Spongebob</title>
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <div class="container">
+            <h1 class="mt-5">Spongebob</h1>
+            <p class="lead">Careful! Let me check Twitter!</p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <textarea class="form-control" id="plainText" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" id="spongebobifyButton">Spongebobify</button>
+                    </div>
+                    <textarea class="form-control" id="spongebobifiedText" rows="5" readonly></textarea>
+                </div>
+            </div>
+        </div>
+        <script src="spongebob.js"></script>
+        <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>
+            $(window).ready(() => {
+                $('#spongebobifyButton').click(() => {
+                    $('#spongebobifiedText').val(spongebobify($('#plainText').val()));
+                });
+            });
+        </script>
+    </body>
+</html>
